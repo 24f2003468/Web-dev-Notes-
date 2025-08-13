@@ -1,0 +1,174 @@
+GIT (free & open source Version Control system)
+
+--> A version control system- Tools that helps to track changes in code 
+
+Two types of version control 
+1.) central version control
+2.) Distributed version control
+
+# central version control 
+In a centralized system, there is one central server that holds all the versioned files. All developers pull and push code directly from/to this central server.
+
+Cons---
+
+-Requires constant network access to the server.
+-If the server goes down or is lost, you lose everything.
+-Limited offline work support.
+
+
+2.) Distributed version control
+In a distributed system, every developer has a full copy of the entire code history (repository) on their local machine. You can work offline, commit locally, and sync with others when needed.
+
+
+
+
+
+
+
+
+
+
+
+GITHUB - A website where we host repositories online 
+
+STEP-1 Configure git
+
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+
+-- git config --list
+
+**do not need to reconfigure Git every time you create a new folder **
+
+Basic workflow:
+STep1: you modify a file from the working directory
+
+Step:2 you add these files to the staging area
+
+Step:3 you perform commit operation that moves the files from the stagging area .After push operation,it store the changes permanently to the Git repository
+
+
+---Some concepts---
+
+## BLOBS:
+Blob stand for Binary Large Object.Each version of a file is represented by a blob.A blob holds the file data but does't contain any meta data about the file.It is a binary file,and in Git Database,it is named as SHA1 hash of that file.In Git,files are not addressed by names.Everything is content-addressed.
+
+## commits:
+
+- commit holds the current state of the repository.A commit is also named by SHA1 hash.
+- Commit Object=a node of linkedlist
+- Every commit Object has a pointer to the parent commit Object
+- from a given commit, you can traverse back by looking at the parent pointer to view the history of the commit.
+- if a commit has multiple parent commits, then that particular commit has been created by merging two branches
+
+
+----------Commands basic---------
+
+clone: clone a repo on your local machine  
+command:-->   `git clone  <link>`
+
+status: display the state of the code    
+jab jab ham apne code me changes karte hai hamre code ka status change hota hai 
+
+command :---> `git status`
+
+
+ham untracked file ko pehele add karenge then unko track karenge by status and abhi wo unmodified file hai as hamne usme koi change nahi kiya hai agar change kar diya to wo file modified ho jaygi 
+
+modified karne ke badd usme ham stage karte hai then wo files again unmodified ke step pe a jati hai 
+
+modified files ko ham add karte hai unhe stage karne liye then commit karte hai firse unmodified
+karne ke liye
+
+
+## add : add new or changed file in your working directory to the git staging area.
+
+`git add <fileName>` or `git add . '
+
+## commit : it is the recored of the change a stamp
+
+`git commit -m "some message"`
+
+ye abhi tak ka sara kam mere local machine me ho rha hai 
+
+## push :upload local repo content to remote repo
+`git push origin main`
+
+## `git init` :  used to create a new git repo
+
+'git remote add origin <link>`
+
+'git remote -v` to verify remote
+
+'git branch ' to check branch
+
+'git branch -M main` to rename branch
+
+'git push origin` we can also set `git push -u origin main`
+
+
+##Git branch
+
+`git branch` to check the current branch
+
+`git branch -M main` to rename the branch
+
+`git checkout <-branch name->` to navigate
+
+`git checkout -b <-new branch name->` to create new branch
+
+`git branch -d <-branch name->` to delete the branch
+
+
+ab ek branch ke andar code me change kar diya ab use main branch ke sath merge kase kare 
+
+
+## Merging code 
+
+`git diff <-branch name->` ( to compare commits,branches,files&more)
+
+`git merge <-branch name->` to merge two branches  
+
+
+## Pull se hamne git hub par branches ko merge kar diya tha but local machine me un changes ko dekhne ke liye 
+`git pull origin main` karna hoga 
+
+-------
+
+## Merge conflicts
+An event that takes place when Git is unable to automatically resolve differnece in code between two commits
+
+
+## fixing mistakes 
+
+Case1: if we added unwanted changes means staged unwanted changes 
+
+`git reset <-file name->`
+`git reset `
+
+case2: wrong commit kardiya
+
+`git reset HEAD~1'  HEAD1 pointing last commit
+
+case3: many commits ko undo karna 
+`git log' info lo commits ka 
+
+commit hash ko copy karo 
+
+q type karo 
+
+`git reset <-commit hash->
+
+`git reset --hard <-commit hash->
+
+
+
+## Forking 
+
+A fork is a new repo that shares code and visiblity settings with the original "upstream" repo 
+
+Fork is a rough copy 
+
+basically open source type copy kardo 
+    
