@@ -14,3 +14,10 @@ jase browser environment deta hai js ko run karne kai, ase hi bhar nodejs ek env
 jase browser 1 environment hai or wo hame console window provide karta hai, ase hi nodejs bhi 1 window provide karta hai terminal me jisko node likh kar access kar sakte hai 
 
 ab jase browser me window object hoti hai , yha pe global object hoti hai jiske pass same type of power hai 
+
+
+##Process
+
+Process:This object provides information about,and control over, the current node.js process
+
+process.argv:return an array containing the command-line arguments passesd when the node.js process launched
