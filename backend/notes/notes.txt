@@ -21,3 +21,9 @@ ab jase browser me window object hoti hai , yha pe global object hoti hai jiske 
 Process:This object provides information about,and control over, the current node.js process
 
 process.argv:return an array containing the command-line arguments passesd when the node.js process launched
+
+## module.export
+
+require() a build in function to inlcude external module that exits in seprate file.
+
+module.exports  a special object 
