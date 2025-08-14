@@ -1,0 +1,16 @@
+## Node JS 
+
+it is a js runtime environment,it is used for server side programming
+
+pehele js sirf browser ke andar run ho pata tha , ham js ko browser ke bhar run nahi kar pate then like in our vs code ham js ko run kar sakte hai 
+
+**node.js is not a language,framework or library
+
+jase browser environment deta hai js ko run karne kai, ase hi bhar nodejs ek environment deta hai js ko run karne ka 
+
+
+## Node REPEL (Read Evaluate Print Loop) 
+
+jase browser 1 environment hai or wo hame console window provide karta hai, ase hi nodejs bhi 1 window provide karta hai terminal me jisko node likh kar access kar sakte hai 
+
+ab jase browser me window object hoti hai , yha pe global object hoti hai jiske pass same type of power hai 
